@@ -37,7 +37,7 @@
     ```
 
 - No magic values in styles, use values from the theme specification in `shared/theme.js` for variants instead
-- Only use [styled-components] for pseudo-classes, eg. `a:hover`
+- Only use [styled-components] for pseudo-classes and media queries, eg. `a:hover`
 - If a component is re-used across a lot of other components, feel free to propose a new system component. It is an evolving set of components to speed up the process of development.
 - Refactor existing inline HTML tags to the appropriate system component if you make changes to the UI.
 
