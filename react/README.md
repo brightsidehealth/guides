@@ -26,17 +26,20 @@
   - Use a style object for multi-line styles. eg.
 
     ```js
+      <Body style={styles.body} />
+    ```
+
+    ```js
       const styles = {
         body: {
           marginBottom: theme.spacing['0'],
           paddingBottom: theme.spacing['4'],
         },
       }
-
-      <Body style={styles.body} />
     ```
 
 - No magic values in styles, use values from the theme specification in `shared/theme.js` for variants instead
+- Define styles outside of the component function body
 - Only use [styled-components] for pseudo-classes and media queries, eg. `a:hover`
 - If a component is re-used across a lot of other components, feel free to propose a new system component. It is an evolving set of components to speed up the process of development.
 - Refactor existing inline HTML tags to the appropriate system component if you make changes to the UI.
