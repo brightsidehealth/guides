@@ -13,6 +13,14 @@
 - Use semicolons at the end of each statement.
 - Prefer single quotes.
 - Prefer ES6 [destructuring] over object literal notation.
+- When destructuring, only go down one level in nesting.
+```javascript
+  // Good: 
+  const { data: dogData } = await DogService.getDog();
+  const { isBarker, hasFuzzyEars } = dogData; 
+  // Bad: 
+  const { data: { isBarker, HasFuzzyEars } } = await DogService.getDog();
+```
 - Use ES6 [spread] and [rest] operator wherever possible for a cleaner code.
 - Use `PascalCase` for classes, `lowerCamelCase` for variables and functions,
   `SCREAMING_SNAKE_CASE` for constants, `_singleLeadingUnderscore` for private
