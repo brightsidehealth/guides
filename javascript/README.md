@@ -13,7 +13,7 @@
 - Use semicolons at the end of each statement.
 - Prefer single quotes.
 - Prefer ES6 [destructuring] over object literal notation.
-- When destructuring, only go down one level in nesting.
+- Do not use nested destructuring.
 ```javascript
   // Good: 
   const { data: dogData } = await DogService.getDog();
